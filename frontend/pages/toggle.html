@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoSuggest</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/"> Home</a>
+        <a href="/pages/card.html"> Card</a>
+        <a href="/pages/toggle.html"> Toggle</a>
+        <a href=""> Random user</a>
+    </div>
+    <div class="card">
+        <img id="userImg" src="../images/john.png" alt="user image">
+        <h2 id="name">John Doe</h2>
+        <p id="gender">Male</p>
+        <button class="toggle-btn" onclick="toggleGender()">Toggle</button>
+    </div>
+       <script>
+let isMale = true;
+
+function toggleGender() {
+    const img = document.getElementById("userImg");
+    const name = document.getElementById("name");
+    const gender = document.getElementById("gender");
+
+    if (isMale) {
+        img.src = "../images/jane.png";
+        name.innerText = "Jane Doe";
+        gender.innerText = "Female";
+    } else {
+        img.src = "../images/john.png";
+        name.innerText = "John Doe";
+        gender.innerText = "Male";
+    }
+
+    isMale = !isMale;
+}
+</script>
+</body>
+</html>
