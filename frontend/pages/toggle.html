@@ -14,31 +14,12 @@
         <a href=""> Random user</a>
     </div>
     <div class="card">
-        <img id="userImg" src="../images/john.png" alt="user image">
-        <h2 id="name">John Doe</h2>
-        <p id="gender">Male</p>
-        <button class="toggle-btn" onclick="toggleGender()">Toggle</button>
+        <img id="user-img" src="../images/john.png" alt="user image">
+        <h2 id="user-name">John Doe</h2>
+        <p id="user-gender">Male</p>
+        <button onclick="toggle()">Toggle</button>
     </div>
-       <script>
-let isMale = true;
-
-function toggleGender() {
-    const img = document.getElementById("userImg");
-    const name = document.getElementById("name");
-    const gender = document.getElementById("gender");
-
-    if (isMale) {
-        img.src = "../images/jane.png";
-        name.innerText = "Jane Doe";
-        gender.innerText = "Female";
-    } else {
-        img.src = "../images/john.png";
-        name.innerText = "John Doe";
-        gender.innerText = "Male";
-    }
-
-    isMale = !isMale;
-}
-</script>
+    <script src="../js/index.js"></script>
+    <script src="../js/toggle.js"></script>
 </body>
 </html>
